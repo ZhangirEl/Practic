@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+    border: 0;
+    background: none;
+    box-sizing: border-box;
+    position: relative;
+    list-style: none;
+}
+
+:root {
+    --container: 1280px;
+    --column-size: 70px;
+    --gap: 40px;
+
+    --primary: rgb(150, 125, 200);
+    --button: rgb(85, 220, 220);
+    --background: #fff;
+    --text: #252525;
+
+    --radius-outer: 70px;
+}
+
+h2, h3 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    background: var(--background);
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 220px auto 220px;
+    gap: var(--gap);
+}
+
+#menu {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    height: 30px;
+    grid-column: 3;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 60px);
+    gap: var(--gap);
+}
+
+#menu > li {
+    display: inline;
+    grid-row: 1;
+    grid-column: span 1;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background: var(--primary);
+    color: var(--background);
+}
+
+#hero > div > header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: -50px;
+}
+
+header > p {
+    margin-top: var(--gap);
+    font-size: 24px;
+    line-height: 36px;
+
+}
+
+.container {
+    margin: auto;
+    width: var(--container);
+    align-items: center;
+    text-align: center;
+    min-height: 250px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, var(--column-size));
+    gap: var(--gap);
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: 250px 150px;
+    gap: var(--gap);
+}
+
+header.grid > h1,
+header.grid > p,
+header.grid > img {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    width: 100%;
+}
+
+header.grid > button {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    margin: 20px auto;
+    padding: 20px 70px;
+    border: 2px solid gray;
+    border-radius: var(--radius-outer);
+    background: var(--button);
+}
+
+section.gray > div > button {
+    grid-column: span 3;
+    border: 1px solid gray;
+    border-radius: var(--radius-outer);
+    padding: 15px 50px;
+    background: var(--primary);
+    color: var(--background);
+}
+
+.buttons {
+    display: inline;
+    height: 100px;
+}
+
+.buttons > button {
+    margin: 20px 25px;
+    border: 1px solid gray;
+    border-radius: var(--radius-outer);
+    padding: 15px 75px;
+}
+
+.buttons > button:first-child {
+    background: var(--primary);
+    color: var(--background);
+}
+
+#hero > div > nav > ul > li:hover {
+    border-bottom: 3px solid var(--background);
+    height: 40px;
+}
+
+.gray {
+    background: #d6d6d6;
+}
+
+.card {
+    grid-row: 1;
+    grid-column: span 6;
+    margin: var(--gap) auto;
+    text-align: left;
+}
+
+.card > p {
+    margin-top: 15px;
+}
+
+div.cards > button {
+    border: 3px solid gray;
+    border-radius: var(--radius-outer);
+    padding: 15px 75px;
+}
+
+div.cards > img {
+    position: absolute;
+    top: 500px
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+section.gray > div > img {
+    position: absolute;
+    width: 700px;
+    top: 150px;
+    left: 350px;
+}
+
+#info {
+    background: var(--background);
+}
+
+#info > .cards > .card {
+    grid-column: span 4;
+    align-items: center;
+    text-align: center;
+}
+
+.primary {
+    background: var(--primary);
+    align-items: center;
+    text-align: center;
+}
+
+.primary > button {
+    margin: 70px auto;
+    padding: 20px 80px;
+    border: 2px solid gray;
+    border-radius: var(--radius-outer);
+    background: var(--button);
+}
+
+.navigation {
+    grid-column: span 4;
+    text-align: center;
+    align-items: center;
+    margin: 75px auto;
+}
+
+.navigation > nav {
+    margin-top: 20px;
+    display: list-item;
+}
+
+.navigation > nav > li + li {
+    margin-top: 20px;
+}
+
+.navigation > nav > li {
+    font-weight: 600;
+}
+
+footer {
+    height: 700px;
+}
